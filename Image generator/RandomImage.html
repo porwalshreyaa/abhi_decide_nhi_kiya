@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>random imagage generator</title>
+</head>
+<body>
+    
+    <button type="button" onclick="change()">Change</button>
+    <script >
+        
+        let randomNO = Math.floor(Math.random()* 10)
+        let elem = `${randomNO}.jpg `
+        
+            function change(){
+            console.log('generating another random number');
+            let randomNO = Math.floor(Math.random()* 10 + 1);
+            let elem = `${randomNO}.jpg`;
+            console.log(elem);
+            document.getElementById('text').innerText = elem;
+            document.getElementById('div').innerHTML = `<img class="image" src="\images\\${elem}">`;
+            
+            }
+    </script>
+    
+    <div >
+        <p id="text"> Change this line.</p>
+        <div class="imagebox" id="div">
+
+        </div>
+    </div>
+        
+            
+        
+</body>
+</html>
